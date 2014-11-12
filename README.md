@@ -88,6 +88,7 @@ iOS_AlbumAndWaterMark
 //---------2 相册的访问
  
 //相册选中之后调用
+
     - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
     {
         //UIImagePickerControllerOriginalImage === 取原始图片
@@ -99,12 +100,14 @@ iOS_AlbumAndWaterMark
     }
 
 //取消按钮的点击事件
+
     -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
     {
         [picker dismissViewControllerAnimated:YES completion:NULL];
     }
 
 //将图片保存
+
     - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
     {
         NSLog(@"error = %@",error);
