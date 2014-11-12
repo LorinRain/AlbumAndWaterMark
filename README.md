@@ -53,39 +53,39 @@ iOS_AlbumAndWaterMark
     
     // 访问相册以及摄像头
     -(void)look:(UIButton*)button
-{
-    if (button.tag == 100) {
-        imagepicker = [[UIImagePickerController alloc]init];
-        imagepicker.delegate = self;
-        //访问相册类型的类型
-        //UIImagePickerControllerSourceTypePhotoLibrary,
-        //UIImagePickerControllerSourceTypeCamera, =====  访问摄像头
-        //UIImagePickerControllerSourceTypeSavedPhotosAlbum ======= 只能访问第一列的图片
-        imagepicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        //以摩擦动画的方式显示
-        [self presentViewController:imagepicker animated:YES completion:^{
+    {
+        if (button.tag == 100) {
+            imagepicker = [[UIImagePickerController alloc]init];
+            imagepicker.delegate = self;
+            //访问相册类型的类型
+            //UIImagePickerControllerSourceTypePhotoLibrary,
+            //UIImagePickerControllerSourceTypeCamera, =====  访问摄像头
+            //UIImagePickerControllerSourceTypeSavedPhotosAlbum ======= 只能访问第一列的图片
+            imagepicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            //以摩擦动画的方式显示
+            [self presentViewController:imagepicker animated:YES completion:^{
+                 
+            }];
+     
+        }else {
              
-        }];
- 
-    }else {
-         
-        //注意摄像头的访问需要在真机上进行
-         
-        //UIImagePickerControllerCameraDeviceFront === 前摄像头
-        //UIImagePickerControllerCameraDeviceRear === 后摄像头
-        BOOL isCamrma = [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
-        if (!isCamrma) {
-            NSLog(@"没有摄像头");
-            return;
+            //注意摄像头的访问需要在真机上进行
+             
+            //UIImagePickerControllerCameraDeviceFront === 前摄像头
+            //UIImagePickerControllerCameraDeviceRear === 后摄像头
+            BOOL isCamrma = [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
+            if (!isCamrma) {
+                NSLog(@"没有摄像头");
+                return;
+            }
+            //摄像头
+            imagepicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            //允许编辑
+            imagepicker.allowsEditing =YES;
         }
-        //摄像头
-        imagepicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        //允许编辑
-        imagepicker.allowsEditing =YES;
     }
-}
 
-/---------2 相册的访问
+//---------2 相册的访问
 #pragma mark - UIImagePickerControllerDelegate
  
  
