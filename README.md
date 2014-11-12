@@ -7,12 +7,12 @@ iOS_AlbumAndWaterMark
 
 在ViewController.h中：
 
-@interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-
-@property (nonatomic, retain) UIImagePickerController *imagePicker;
-@property(nonatomic,retain)UIImageView* imageview1;
-
-@end
+    @interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+    
+    @property (nonatomic, retain) UIImagePickerController *imagePicker;
+    @property(nonatomic,retain)UIImageView* imageview1;
+    
+    @end
 
 在ViewController.m中：
 
@@ -88,25 +88,25 @@ iOS_AlbumAndWaterMark
 //---------2 相册的访问
  
 //相册选中之后调用
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    //UIImagePickerControllerOriginalImage === 取原始图片
-    //UIImagePickerControllerEditedImage === 去编辑以后的图片
-    UIImage* image = [info objectForKey:UIImagePickerControllerEditedImage];
-    imageview1.image = image;
-    NSLog(@"info = %@",info);
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
+    - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+    {
+        //UIImagePickerControllerOriginalImage === 取原始图片
+        //UIImagePickerControllerEditedImage === 去编辑以后的图片
+        UIImage* image = [info objectForKey:UIImagePickerControllerEditedImage];
+        imageview1.image = image;
+        NSLog(@"info = %@",info);
+        [picker dismissViewControllerAnimated:YES completion:nil];
+    }
 
 //取消按钮的点击事件
--(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-}
+    -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+    {
+        [picker dismissViewControllerAnimated:YES completion:NULL];
+    }
 
 //将图片保存
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
-{
-    NSLog(@"error = %@",error);
-}
+    - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+    {
+        NSLog(@"error = %@",error);
+    }
  
