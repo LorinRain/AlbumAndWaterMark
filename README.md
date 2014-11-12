@@ -86,8 +86,6 @@ iOS_AlbumAndWaterMark
     }
 
 //---------2 相册的访问
-#pragma mark - UIImagePickerControllerDelegate
- 
  
 //相册选中之后调用
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
