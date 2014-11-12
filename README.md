@@ -4,6 +4,7 @@ iOS_AlbumAndWaterMark
 访问相册摄像头保存图片至相册以及图片加水印
 
 
+#pragma mark - 访问相册摄像头
 ----------------------------访问相册摄像头---------------------------
 
 在ViewController.h中：
@@ -117,6 +118,7 @@ iOS_AlbumAndWaterMark
  
 
 
+#pragma mark - 图片加水印
 ----------------------------图片加水印---------------------------
 
 1.加文字
@@ -227,8 +229,6 @@ iOS_AlbumAndWaterMark
     
 4.加图片
 
-#pragma mark - 加图片水印
-
     -(UIImage *)imageWithLogoImage:(UIImage *)img logo:(UIImage *)logo
     {
         //get image width and height
@@ -249,8 +249,6 @@ iOS_AlbumAndWaterMark
     }
     
 5.新的添加图片水印的方法
-
-#pragma mark -还是图片水印
 
     - (UIImage *) imageWithWaterMask:(UIImage*)mask inRect:(CGRect)rect
     {
