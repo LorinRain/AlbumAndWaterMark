@@ -51,7 +51,8 @@ iOS_AlbumAndWaterMark
     [buttoncamera addTarget:self action:@selector(look:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttoncamera];
     
-    // 访问相册以及摄像头
+// 访问相册以及摄像头
+
     -(void)look:(UIButton*)button
     {
         if (button.tag == 100) {
