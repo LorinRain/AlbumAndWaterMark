@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B1CDE3DF-349E-4009-996D-1E3B90E484E6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PicWithText</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>12733979AF2A19AB66BE6DE7A3567E2A21DACA1A</key>
+		<string>https://bitbucket.org/LorinRain/watermarkimage.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PicWithText.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>12733979AF2A19AB66BE6DE7A3567E2A21DACA1A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/LorinRain/watermarkimage.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>12733979AF2A19AB66BE6DE7A3567E2A21DACA1A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>12733979AF2A19AB66BE6DE7A3567E2A21DACA1A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PicWithText</string>
+		</dict>
+	</array>
+</dict>
+</plist>
