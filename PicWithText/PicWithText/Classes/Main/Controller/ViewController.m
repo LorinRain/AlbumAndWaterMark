@@ -185,6 +185,8 @@
 {
     if(buttonIndex == 0) {  // 从相册选取
         // 访问相册
+        // 选取完成后截取照片
+        self.imagePicker.allowsEditing = YES;
         // 以摩擦动画的方式显示
         [self presentViewController: self.imagePicker animated: YES completion:^{
             
